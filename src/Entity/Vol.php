@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\VolRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -51,6 +53,16 @@ class Vol
      * @ORM\Column(type="string", length=200)
      */
     private $v_depart;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Aeroport::class, mappedBy="Vol")
+     */
+    private $aeroports;
+
+    public function __construct()
+    {
+        $this->aeroports = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -137,6 +149,36 @@ class Vol
     public function setVDepart(string $v_depart): self
     {
         $this->v_depart = $v_depart;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Aeroport[]
+     */
+    public function getAeroports(): Collection
+    {
+        return $this->aeroports;
+    }
+
+    public function addAeroport(Aeroport $aeroport): self
+    {
+        if (!$this->aeroports->contains($aeroport)) {
+            $this->aeroports[] = $aeroport;
+            $aeroport->setVol($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAeroport(Aeroport $aeroport): self
+    {
+        if ($this->aeroports->removeElement($aeroport)) {
+            // set the owning side to null (unless already changed)
+            if ($aeroport->getVol() === $this) {
+                $aeroport->setVol(null);
+            }
+        }
 
         return $this;
     }

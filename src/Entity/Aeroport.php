@@ -27,6 +27,11 @@ class Aeroport
      */
     private $pays;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Vol::class, inversedBy="aeroports")
+     */
+    private $Vol;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Aeroport
     public function setPays(string $pays): self
     {
         $this->pays = $pays;
+
+        return $this;
+    }
+
+    public function getVol(): ?Vol
+    {
+        return $this->Vol;
+    }
+
+    public function setVol(?Vol $Vol): self
+    {
+        $this->Vol = $Vol;
 
         return $this;
     }
