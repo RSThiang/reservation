@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+       <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+       <title> Billeterie</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/bootstrap.min.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/style.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/responsive.css')}}">
+       <link rel="icon" href="{{asset('Acceuil/images/fevicon.png')}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/jquery.mCustomScrollbar.min.css")}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/owl.carousel.min.css")}}">
+      <link rel="stylesheet" href="{{asset("Acceuil/css/owl.theme.default.min.css")}}">
+       <script src="{{asset(' mhttps://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
+      <script src="{{asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script> 
+   </head>
+    <body class="main-layout">
+         {% block body %}
+       <header>
+          <div class="header">
+            <div class="header_white_section">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="header_information">
+                           <ul>
+                              <li><img src="{{asset('Acceuil/images/1.png')}}" />  221 Sénégal</li>
+                              <li><img src="{{asset('Acceuil/images/2.png')}}"/> +77 XXX XX XX</li>
+                              <li><img src="{{asset('Acceuil/images/3.png')}}"/>  mail@gmail.com</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-xl-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"> <a href="{{path('index')}}"><img src="{{asset('Acceuil/images/plane-img.png')}}"  width="100"/></a> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li class="active"> <a href="{{path('index')}}">Home</a> </li>
+                                 <li> <a href="{{path('propos')}}">A propos</a></li>
+                                 <li><a href="{{path('app_login')}}">Voyage</a></li>
+                                 <li><a href="{{path('blog')}}">Blog</a></li>
+                                 <li><a href="{{path('contact')}}">Contacte</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+       </header>
+       {% endblock %}
+       </body>
+      </html>

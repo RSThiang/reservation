@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="fr">
+   <head>
+       <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+       <title> Billeterie</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/bootstrap.min.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/style.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/responsive.css')}}">
+       <link rel="icon" href="{{asset('Acceuil/images/fevicon.png')}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/jquery.mCustomScrollbar.min.css")}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/owl.carousel.min.css")}}">
+      <link rel="stylesheet" href="{{asset("Acceuil/css/owl.theme.default.min.css")}}">
+       <script src="{{asset(' mhttps://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
+      <script src="{{asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script> 
+   </head>
+   <body>
+   {% include 'nave.html.twig' %}
+<section >
+         <div class="banner-main">
+            <img src="{{asset('Acceuil/images/image3.jpg')}}"/>
+            <div class="container">
+               <div class="text-bg">
+                  <h1>SENEGAL<br><strong class="white">VOYAGE EN AFRIQUE</strong></h1>
+                  <div class="button_section"> <a class="main_bt" href="#">Recherche De vol</a>  </div>
+                  <div class="container">
+                     <form class="main-form" color="blue">
+                         <div class="row">
+                           <div class="col-md-12">
+                              <div class="row">
+                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+                                     <input class="form-control" placeholder="De..." type="text" name="">
+                                 </div>
+                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+                                     <input class="form-control" placeholder="Á..." type="text" name="">
+                                 </div>
+                                
+                                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+                                     <input class="form-control" placeholder="Any" type="date" name="Any">
+                                 </div>
+                                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
+                                  <a href="{{path('recherche')}}">Recherche</a>
+                               </div>
+                              </div>
+                           </div>
+                          
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+<br>
+<br>
+      <div class="amazing">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="amazing-box">
+                     <h2>Senegal Voyage</h2>
+                     <span> Faite Votre voyage dans de bonne condition </span><br>
+                     <a href="{{path('reserve_s')}}">Reserver</a><a href="{{path('propos')}}">En savoir Plus</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+ {% include 'footer.html.twig' %}
+       </body>
+      </html>

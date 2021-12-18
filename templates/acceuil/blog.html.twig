@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+       <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+       <title> Billeterie</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/bootstrap.min.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/style.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/responsive.css')}}">
+       <link rel="icon" href="{{asset('Acceuil/images/fevicon.png')}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/jquery.mCustomScrollbar.min.css")}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/owl.carousel.min.css")}}">
+      <link rel="stylesheet" href="{{asset("Acceuil/css/owl.theme.default.min.css")}}">
+       <script src="{{asset(' mhttps://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
+      <script src="{{asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script> 
+   </head>
+    <body class="main-layout">
+       {% include 'nave.html.twig' %}
+<div id="blog" class="blog">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Notre Blog</h2>
+                     <span></span> 
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="blog-box">
+                     <figure><img src="{{asset('Acceuil/images/13.jpg')}}" alt="#"/>
+                        <span> </span>
+                     </figure>
+                      
+                     <h3> Reserve de billet</h3>
+                     <p> </p>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="blog-box">
+                     <figure><img src="{{asset('Acceuil/images/image3.jpg')}}" alt="#"/>
+                        <span> </span>
+                     </figure>
+                      
+                     <h3>Reserve de billet</h3>
+                     <p> </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+       {% include 'footer.html.twig' %}
+ 
+       </body>
+      </html>

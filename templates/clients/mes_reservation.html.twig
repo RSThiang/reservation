@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+       <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+       <title> Billeterie</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/bootstrap.min.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/style.css')}}">
+       <link rel="stylesheet" href="{{asset('Acceuil/css/responsive.css')}}">
+       <link rel="icon" href="{{asset('Acceuil/images/fevicon.png')}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/jquery.mCustomScrollbar.min.css")}}">
+       <link rel="stylesheet" href="{{asset("Acceuil/css/owl.carousel.min.css")}}">
+      <link rel="stylesheet" href="{{asset("Acceuil/css/owl.theme.default.min.css")}}">
+       <script src="{{asset(' mhttps://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
+      <script src="{{asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script> 
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('Vogaye/css/bootstrap.min.css')}}">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" type="text/css" href="{{asset('Vogaye/slick/slick.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('Vogaye/slick/slick-theme.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('Vogaye/css/datepicker.css')}}"/>
+    <link rel="stylesheet" href="{{asset('Vogaye/css/tooplate-style.css')}}">                                   <!-- Templatemo style -->
+
+ 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+      
+   </head>
+
+
+    <body class="main-layout">
+       {% include 'nave.html.twig' %}
+       
+ <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+ 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
+		 
+		<div class="navbar-nav ml-auto">
+ 			<a href="{{path('mes_reservation')}}" class="nav-item nav-link"> Mes Reservations </a>
+			<a href="{{path('reservation')}}" class="nav-item nav-link">Reserver</a>
+            <div class="nav-item dropdown">
+				<a href="" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"> Profile </a>
+				<div class="dropdown-menu">
+ 					<a href="{{path('profil')}}" class="dropdown-item"> Nom</a>
+					 
+					<a href=" {{path('logout')}}" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+				</div>
+			</div>
+  			
+		</div>
+	</div>
+</nav>
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6"><h2> Vols  <b>Disponibles</b></h2></div>
+                     
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                         <th>Id Reseration</th>
+                        <th>Id Vol</th>
+                        <th> Id Passager</th>
+                          
+                    </tr>
+                </thead>
+                <tbody>
+                
+                {% for v in reservations %}
+                    <tr>
+  
+                                              
+                        <td> {{ v.id}}</td>
+                        <td> {{ v.vol_id}}</td>
+                        <td>{{ v.passager_id}}</td>
+                        
+                        <td>
+                             <a href="{{path('reserve_s')}}" class="edit" title="Edit" data-toggle="tooltip">Reserver</i></a>
+                         </td>
+                    </tr>
+                    {% endfor    %}
+
+                     </tbody>
+                    </table>
+        </div>
+        </div>
+        </div>
+ {% include 'footer.html.twig' %}
+ 
+       </body>
+      </html>
